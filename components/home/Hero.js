@@ -9,18 +9,15 @@ const Hero = () => {
         <Box
             className="section border-bottom"
             sx={{
-                backgroundImage: {
-                    xs: `linear-gradient(to right, rgba(255, 252, 235, .5), rgba(255, 252, 235, 0.75), rgba(255, 252, 235, 1)), url(/images/rose2.webp)`,
-                    md: `linear-gradient(to right, rgba(255, 252, 235, 0), rgba(255, 252, 235, 0.5), rgba(255, 252, 235, 1)), url(/images/rose2.webp)`,
-                },
+                backgroundImage:
+                    "linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/images/heroImage.webp)",
                 backgroundSize: "cover",
                 backgroundPosition: { xs: "50% 0%", md: "0% 0%" },
             }}
         >
             <Container maxWidth="xl">
                 <Grid container spacing={2}>
-                    <Grid item xs={12} sm={5}></Grid>
-                    <Grid item xs={12} sm={7}>
+                    <Grid item xs={12} sm={9}>
                         <Box
                             sx={{
                                 padding: {
@@ -29,30 +26,28 @@ const Hero = () => {
                                 },
                                 display: "flex",
                                 flexDirection: "column",
-                                alignItems: "end",
+                                alignItems: "start",
                             }}
                         >
                             <Typography
                                 variant="h1"
                                 component="p"
-                                sx={{
-                                    textAlign: "end",
-                                }}
+                                sx={{ color: "white" }}
                             >
-                                FICTIONAL{" "}
-                                <span className="color-accent">WEB.</span>
+                                HEALTH INSURANCE, SIMPLIFIED
                             </Typography>
                             <Typography
-                                variant="h4"
+                                variant="h5"
                                 component="h1"
                                 sx={{
                                     marginBottom: ".5em",
-                                    textAlign: "end",
-                                    maxWidth: "35rem",
-                                    // color: theme.palette.custom.darkMuted,
+                                    maxWidth: "37rem",
+                                    color: theme.palette.custom.lightMuted,
+                                    fontSize: "1.5rem",
                                 }}
                             >
-                                We create websites that tell stories.
+                                Let us help you find the coverage that&rsquo;s
+                                right for you, at absolutely no cost to you
                             </Typography>
                             <Box
                                 sx={{
@@ -64,10 +59,11 @@ const Hero = () => {
                                 <Link href="/projects">
                                     <Button
                                         endIcon={<ArrowRightAlt />}
-                                        variant="outlined"
+                                        variant="contained"
                                         color="secondary"
+                                        size="large"
                                     >
-                                        view our work
+                                        Get started
                                     </Button>
                                 </Link>
                             </Box>

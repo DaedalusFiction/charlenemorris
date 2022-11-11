@@ -4,20 +4,19 @@ import React from "react";
 import theme from "../../styles/themes/theme";
 import Meta from "../home/Meta";
 import Footer from "./Footer";
-import Navbar from "./Navbar";
+import Header from "./Header";
 
 const Layout = ({ children }) => {
     return (
-        <Box>
+        <Box sx={{ position: "relative", zIndex: "0" }}>
             <Meta />
-            <Navbar />
+            {/* <Navbar /> */}
+            <Header />
             <Container
                 maxWidth="xl"
                 disableGutters
                 sx={{
                     position: "relative",
-                    borderRight: theme.border,
-                    borderLeft: theme.border,
                 }}
             >
                 {children}

@@ -9,220 +9,314 @@ import ServicesShowcase from "../components/services/ServicesShowcase";
 
 import Meta from "../components/home/Meta";
 import theme from "../styles/themes/theme";
-import { servicesContent } from "../siteInfo";
+import { homePage, servicesContent } from "../siteInfo";
 import ValueShowcase from "../components/home/ValueShowcase";
+import ContactPreview from "../components/contact/ContactPreview";
+import NativeImage from "../components/general/NativeImage";
+import BlockQuote from "../components/general/BlockQuote";
 
 export default function Home() {
     return (
         <Container maxWidth="xl" disableGutters>
             <Meta />
             <Hero />
-            <Grid container>
-                <Grid item xs={12} md={5}>
-                    <Box
-                        className="gradient border-bottom"
-                        sx={{
-                            padding: {
-                                xs: theme.custom.spacing.small,
-                                md: theme.custom.spacing.medium,
-                            },
-                            borderRight: { xs: "none", md: theme.border },
-                            height: "100%",
-                        }}
-                    >
-                        <Typography
-                            variant="h2"
-                            component="p"
-                            sx={{ textAlign: { xs: "center", md: "end" } }}
-                        >
-                            The journey of a thousand miles begins with a single
-                            click.
-                        </Typography>
-                    </Box>
-                </Grid>
-                <Grid item xs={12} md={7}>
-                    <Box
-                        className="border-bottom"
-                        sx={{
-                            padding: {
-                                xs: theme.custom.spacing.small,
-                                md: theme.custom.spacing.large,
-                            },
-                            display: "flex",
-                            flexDirection: "column",
-                            height: "100%",
-                            justifyContent: "space-between",
-                        }}
-                    >
-                        <Box>
-                            <Typography>
-                                We build websites that tell stories. But
-                                that&rsquo;s perhaps a bit misleading. In the
-                                real world, <em>everything</em> tells a story.
-                            </Typography>
-                            <br />
-                            <Typography>
-                                If you&rsquo;re a chef, your menu tells the
-                                story of your heritage and your taste. If
-                                you&rsquo;re a photographer, your portfolio
-                                tells the story of how you see the world and how
-                                that vision has changed and changes over time.
-                                If you&rsquo;re a novelist... Well, your stories
-                                tell stories.
-                            </Typography>
-                            <br />
-                            <Typography>
-                                Your website can help that story reach a wider
-                                audience. But more than that, in telling your
-                                story it becomes part of the story itself.
-                                Everything about your website colors it, from
-                                the fonts and the images to the animated
-                                elements and the use of negative space.
-                            </Typography>
-                            <br />
-                            <Typography>
-                                Your website tells the story of who you are.
-                            </Typography>
-                            <br />
-                        </Box>
+            <Container maxWidth="xl">
+                <Grid container spacing={4} sx={{ padding: "8rem 0" }}>
+                    <Grid item xs={12} md={5}>
                         <Box
                             sx={{
                                 display: "flex",
-                                justifyContent: "space-between",
-                                gap: "2rem",
-                                flexWrap: "wrap",
-                                marginBottom: ".75rem",
+                                height: "100%",
+                                justifyContent: "center",
                             }}
                         >
-                            <Typography>
-                                So make sure you tell it well.
-                            </Typography>
+                            <NativeImage image={homePage.image} maxSize="500" />
+                        </Box>
+                    </Grid>
+                    <Grid item xs={12} md={7}>
+                        <Box
+                            sx={{
+                                display: "flex",
+                                height: "100%",
+                                alignItems: "center",
+                            }}
+                        >
+                            <Box>
+                                <Typography
+                                    variant="h2"
+                                    sx={{ textAlign: "center" }}
+                                >
+                                    Let&rsquo;s Work Together on This!
+                                </Typography>
+                                <br />
+                                <Typography sx={{ maxWidth: "55ch" }}>
+                                    My name is Charlene Morris and I am a
+                                    Licensed Insurance Broker. I have been
+                                    visiting homes and helping people navigate
+                                    the field of Medicare and Medicaid options
+                                    since 2006. I always explain details
+                                    thoroughly and I work hard to effectively
+                                    and professionally address consumers&rsquo;
+                                    concerns. I am proud of my exceptional
+                                    interpersonal skills and my ability to
+                                    quickly handle challenges.
+                                </Typography>
+                            </Box>
+                        </Box>
+                    </Grid>
+                </Grid>
+            </Container>
+
+            {/* Insurance Plans */}
+            <Box
+                sx={{
+                    backgroundColor: theme.palette.primary.main,
+                    padding: "4rem 0",
+                }}
+            >
+                <Container maxWidth="lg">
+                    <Typography
+                        variant="h1"
+                        component="h3"
+                        sx={{
+                            color: "white",
+                            textAlign: "center",
+                            marginBottom: "4rem",
+                        }}
+                    >
+                        Insurance Plans
+                    </Typography>
+                    <Grid container spacing={4}>
+                        <Grid item xs={12} md={3}>
                             <Box
                                 sx={{
                                     display: "flex",
-                                    justifyContent: {
-                                        xs: "center",
-                                        md: "start",
-                                    },
-                                    width: "100%",
+                                    alignItems: "center",
+                                    flexDirection: "column",
                                 }}
                             >
-                                <Link href="/contact">
-                                    <Button
-                                        endIcon={<ArrowRightAlt />}
-                                        variant="outlined"
-                                        color="secondary"
-                                    >
-                                        View Services
-                                    </Button>
-                                </Link>
-                            </Box>
-                        </Box>
-                    </Box>
-                </Grid>
-            </Grid>
-            <ProjectsPreview />
-            <ValueShowcase />
-            <ServicesShowcase services={servicesContent} isPreview />
-            <Grid container className="border-bottom">
-                <Grid item xs={12} md={6}>
-                    <Box
-                        sx={{
-                            height: "100%",
-                            display: "flex",
-                            flexDirection: "column",
-                            justifyContent: "space-between",
-                            alignItems: { xs: "start", md: "end" },
-                            borderRight: { xs: "none", md: theme.border },
-                            padding: {
-                                xs: theme.custom.spacing.small,
-                                md: theme.custom.spacing.medium,
-                            },
-                            background: theme.palette.primary.main,
-                        }}
-                    >
-                        <Box
-                            sx={{
-                                display: "flex",
-                                flexDirection: "column",
-                                alignItems: { xs: "start", md: "end" },
-                            }}
-                        >
-                            <Typography
-                                variant="h3"
-                                component="p"
-                                sx={{
-                                    color: theme.palette.custom.light,
-                                    textAlign: { xs: "center", md: "end" },
-                                }}
-                            >
-                                Copyediting comes standard.
-                            </Typography>
-                            <br />
-                            <Typography
-                                sx={{
-                                    maxWidth: "45ch",
-                                    color: theme.palette.custom.lightMuted,
-                                    textAlign: { xs: "start", md: "end" },
-                                }}
-                            >
-                                Our background in newspaper and fiction editing
-                                has given us an ear for language. If you know
-                                what you want to tell people but aren&rsquo;t
-                                sure quite how to word it, we can help.
-                            </Typography>
-                        </Box>
-                        <br />
-                        <Box
-                            sx={{
-                                display: "flex",
-                                justifyContent: {
-                                    xs: "center",
-                                    md: "end",
-                                },
-                                width: "100%",
-                                marginBottom: ".75rem",
-                            }}
-                        >
-                            <Link href="/contact">
-                                <Button
-                                    endIcon={<ArrowRightAlt />}
-                                    variant="contained"
-                                    color="secondary"
+                                <NativeImage
+                                    image={homePage.image2}
+                                    maxSize="200"
+                                />
+                                <Typography
+                                    variant="h4"
+                                    sx={{
+                                        color: "white",
+                                        marginTop: ".5em",
+                                        textAlign: "center",
+                                    }}
                                 >
-                                    get in touch
-                                </Button>
-                            </Link>
-                        </Box>
-                    </Box>
-                </Grid>
-                <Grid item xs={12} md={6}>
-                    <Box
-                        sx={{
-                            padding: {
-                                xs: theme.custom.spacing.small,
-                                md: theme.custom.spacing.medium,
-                            },
+                                    Medicare Advantage
+                                </Typography>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12} md={3}>
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                    flexDirection: "column",
+                                }}
+                            >
+                                <NativeImage
+                                    image={homePage.image3}
+                                    maxSize="200"
+                                />
+                                <Typography
+                                    variant="h4"
+                                    sx={{
+                                        color: "white",
+                                        marginTop: ".5em",
+                                        textAlign: "center",
+                                    }}
+                                >
+                                    Dental and Vision
+                                </Typography>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12} md={3}>
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                    flexDirection: "column",
+                                }}
+                            >
+                                <NativeImage
+                                    image={homePage.image4}
+                                    maxSize="200"
+                                />
+                                <Typography
+                                    variant="h4"
+                                    sx={{
+                                        color: "white",
+                                        marginTop: ".5em",
+                                        textAlign: "center",
+                                    }}
+                                >
+                                    Supplemental
+                                </Typography>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12} md={3}>
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                    flexDirection: "column",
+                                }}
+                            >
+                                <NativeImage
+                                    image={homePage.image5}
+                                    maxSize="200"
+                                />
+                                <Typography
+                                    variant="h4"
+                                    sx={{
+                                        color: "white",
+                                        marginTop: ".5em",
+                                        textAlign: "center",
+                                    }}
+                                >
+                                    Prescription Drug
+                                </Typography>
+                            </Box>
+                        </Grid>
+                    </Grid>
+                </Container>
+            </Box>
 
-                            backgroundImage: `linear-gradient(to right, rgba(255, 252, 235, .85), rgba(255, 252, 235, 0.85)), url(/images/rose4.webp)`,
-                            // backgroundSize: "cover",
-                            backgroundPosition: { xs: "50% 0%", md: "15% 10%" },
-                        }}
-                    >
-                        <Typography
-                            variant="h1"
-                            component="p"
-                            sx={{
-                                maxWidth: "40rem",
-                                textAlign: { xs: "center", md: "start" },
-                            }}
-                        >
-                            You won&rsquo;t know what your story is about until
-                            it&rsquo;s finished.
-                        </Typography>
-                    </Box>
-                </Grid>
-            </Grid>
+            <BlockQuote quote={homePage.quote1}>
+                We have been working with Charlene for a number of years. When
+                we began I was reluctant to change insurance carriers, but she
+                was persistent [...] We continue to receive requests from other
+                insurance carriers but find her company and service to be the
+                best [...] If she wants to give my name to anyone who wants
+                super service, please tell them to call me.
+            </BlockQuote>
+
+            <Box
+                sx={{
+                    padding: "8rem 0",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundImage:
+                        "linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(images/showcaseImage.webp)",
+                }}
+            >
+                <Container maxWidth="lg">
+                    <Grid container spacing={6}>
+                        <Grid item xs={12} md={4}>
+                            <Box
+                                sx={{
+                                    border: "1px solid white",
+                                    padding: "2rem",
+                                }}
+                            >
+                                <Typography
+                                    variant="h2"
+                                    sx={{ textAlign: "center", color: "white" }}
+                                >
+                                    Our Promise
+                                </Typography>
+                                <Divider
+                                    sx={{
+                                        background:
+                                            theme.palette.custom.lightMuted,
+                                        margin: "1rem 2rem",
+                                    }}
+                                />
+                                <Typography
+                                    sx={{
+                                        textAlign: "center",
+                                        color: theme.palette.custom.lightMuted,
+                                    }}
+                                >
+                                    We promise to do our best to make sure you
+                                    won&rsquo;t stress over finding affordable
+                                    health insurance while on Medicare.
+                                </Typography>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12} md={4}>
+                            <Box
+                                sx={{
+                                    border: "1px solid white",
+                                    padding: "2rem",
+                                }}
+                            >
+                                <Typography
+                                    variant="h2"
+                                    sx={{ textAlign: "center", color: "white" }}
+                                >
+                                    Our Mission
+                                </Typography>
+                                <Divider
+                                    sx={{
+                                        background:
+                                            theme.palette.custom.lightMuted,
+                                        margin: "1rem 2rem",
+                                    }}
+                                />
+                                <Typography
+                                    sx={{
+                                        textAlign: "center",
+                                        color: theme.palette.custom.lightMuted,
+                                    }}
+                                >
+                                    We are committed to working with you to find
+                                    the insurance plan that fits your needs, and
+                                    we&rsquo;ll do it at no cost to you.
+                                </Typography>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12} md={4}>
+                            <Box
+                                sx={{
+                                    border: "1px solid white",
+                                    padding: "2rem",
+                                }}
+                            >
+                                <Typography
+                                    variant="h2"
+                                    sx={{ textAlign: "center", color: "white" }}
+                                >
+                                    Your Journey
+                                </Typography>
+                                <Divider
+                                    sx={{
+                                        background:
+                                            theme.palette.custom.lightMuted,
+                                        margin: "1rem 2rem",
+                                    }}
+                                />
+                                <Typography
+                                    sx={{
+                                        textAlign: "center",
+                                        color: theme.palette.custom.lightMuted,
+                                    }}
+                                >
+                                    We are here to help you with any questions
+                                    or concerns you may have about your health
+                                    insurance coverage.
+                                </Typography>
+                            </Box>
+                        </Grid>
+                    </Grid>
+                </Container>
+            </Box>
+            <BlockQuote quote={homePage.quote2}>
+                My late husband was referred to Charlene by a friend and after
+                meeting with her we went with [her] and have been so thankful.
+                Charlene&rsquo;s guidance directing us to the best policy for
+                our needs has been invaluable. Since my husband passed away,
+                Charlene has been there for me for the past eleven years. I will
+                get a phone call just to ask me how I&rsquo;m doing. So
+                thoughtful! I feel truly blessed to have Charlene not only as my
+                agent but as my friend.
+            </BlockQuote>
+            <ContactPreview />
         </Container>
     );
 }

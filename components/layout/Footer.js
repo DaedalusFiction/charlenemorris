@@ -4,29 +4,44 @@ import Link from "next/link";
 import React from "react";
 import SocialMediaIcons from "../general/SocialMediaIcons";
 
-const socialMedia = [
-    { media: "twitter", url: "https://google.com" },
-    { media: "instagram", url: "https://google.com" },
-    { media: "facebook", url: "https://google.com" },
-];
-
-const contactInfo = [
-    { type: "telephone", value: "555-555-5555" },
-    { type: "email", value: "hello@artistName.com" },
-];
-
 const Footer = () => {
     return (
         <Container maxWidth="xl">
             <Grid container sx={{ padding: "1rem 0" }}>
-                <Grid item xs={6}>
-                    <SocialMediaIcons color="primary" fontSize="25px" />
+                <Grid item xs={12} md={6}>
+                    <Box>
+                        <Typography>
+                            Copyright 2022 C.R.M. Insurance LLC
+                        </Typography>
+                        <br />
+                        <Typography>P.O. Box 303</Typography>
+                        <Typography>Montpelier, VA 23192</Typography>
+                        <Typography>(804)240-4959</Typography>
+                    </Box>
                 </Grid>
-                <Grid item xs={6}>
-                    <Box sx={{ display: "flex", justifyContent: "end" }}>
-                        <Link href="/contact">
-                            <Button variant="outlined">contact</Button>
-                        </Link>
+                <Grid item xs={12} md={6}>
+                    <Box
+                        sx={{
+                            display: "flex",
+                            justifyContent: { xs: "start", md: "end" },
+                            height: "100%",
+                            alignItems: "end",
+                            paddingTop: "1rem",
+                        }}
+                    >
+                        <Typography>
+                            Website created by{" "}
+                            <Link href="https://fictionalweb.com">
+                                <span
+                                    style={{
+                                        textDecoration: "underline",
+                                        cursor: "pointer",
+                                    }}
+                                >
+                                    Fictional Web
+                                </span>
+                            </Link>
+                        </Typography>
                     </Box>
                 </Grid>
             </Grid>

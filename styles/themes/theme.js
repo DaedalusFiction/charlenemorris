@@ -4,15 +4,12 @@ let theme = createTheme({
     palette: {
         mode: "light",
         primary: {
-            // main: "#3B3B58",
-            main: "#484041",
-            // main: "#fffceb",
-            // off: "#04A777",
+            main: "#d739a4",
             off: "#FBFFF1",
         },
         secondary: {
             // main: "#CBEAA6",
-            main: "#d61919",
+            main: "#62ffcb",
             // main: "#04A777",
             // main: "#DC965A",
         },
@@ -27,7 +24,7 @@ let theme = createTheme({
             dark: "#484041",
             darkMuted: "#757575",
             light: "#fffceb",
-            lightMuted: "#cacaca",
+            lightMuted: "#e6e6e6",
             accent: "#d61919",
         },
         text: {
@@ -38,8 +35,8 @@ let theme = createTheme({
         },
     },
     font: {
-        primary: "Inconsolata",
-        accent: "Yeseva One",
+        primary: "Raleway",
+        accent: "EB Garamond",
     },
 });
 
@@ -116,7 +113,7 @@ theme = createTheme(theme, {
             fontFamily: theme.font.primary,
             fontWeight: "475",
             fontSize: "1.35rem",
-            lineHeight: "1.75rem",
+            lineHeight: "1.5em",
             // color: theme.palette.custom.darkMuted,
             // fontFamily: darkTheme.typography.darkTheme.main,
         },
