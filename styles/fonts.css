@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Inconsolata";
+    src: url("/fonts/Inconsolata.ttf") format("truetype");
+    font-weight: 1 999;
+}
+@font-face {
+    font-family: "Yeseva One";
+    src: url("/fonts/YesevaOne-Regular.ttf") format("truetype");
+    font-weight: 1 999;
+}
+
+.color-test {
+    color: #f7d195;
+}
