@@ -1,16 +1,11 @@
-import { ArrowRightAlt } from "@mui/icons-material";
-import { Box, Button, Divider, Typography } from "@mui/material";
+import { Box, Divider, Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import { Container } from "@mui/system";
-import Link from "next/link";
 import Hero from "../components/home/Hero";
-import ProjectsPreview from "../components/home/ProjectsPreview";
-import ServicesShowcase from "../components/services/ServicesShowcase";
 
 import Meta from "../components/home/Meta";
 import theme from "../styles/themes/theme";
-import { homePage, servicesContent } from "../siteInfo";
-import ValueShowcase from "../components/home/ValueShowcase";
+import { homePage } from "../siteInfo";
 import ContactPreview from "../components/contact/ContactPreview";
 import NativeImage from "../components/general/NativeImage";
 import BlockQuote from "../components/general/BlockQuote";
