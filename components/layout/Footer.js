@@ -16,7 +16,9 @@ const Footer = () => {
                         <br />
                         <Typography>P.O. Box 303</Typography>
                         <Typography>Montpelier, VA 23192</Typography>
-                        <Typography>(804)240-4959</Typography>
+                        <Typography>
+                            <a href="tel:+8042404959">(804) 240-4959</a>
+                        </Typography>
                     </Box>
                 </Grid>
                 <Grid item xs={12} md={6}>

@@ -18,6 +18,20 @@ const Meta = () => {
                     content="literature, literary, stories, story, poetry, poems, poem, magazine, fiction, non-fiction, journal"
                 />
                 <meta name="description" content="Literary Magazine"></meta>
+                <link
+                    rel="preload"
+                    href="/fonts/EBGaramond-VariableFont_wght.ttf"
+                    as="font"
+                    type="font/ttf"
+                    crossOrigin="anonymous"
+                ></link>
+                <link
+                    rel="preload"
+                    href="/fonts/Raleway-VariableFont_wght.ttf"
+                    as="font"
+                    type="font/ttf"
+                    crossOrigin="anonymous"
+                ></link>
             </Head>
         </div>
     );

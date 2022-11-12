@@ -60,7 +60,7 @@ const Header = () => {
                         <Typography
                             sx={{ color: theme.palette.custom.lightMuted }}
                         >
-                            (804) 240-4959
+                            <a href="tel:+8042404959">(804) 240-4959</a>
                         </Typography>
                     </Box>
                 </Box>

@@ -15,9 +15,9 @@ const Hero = () => {
                 backgroundPosition: { xs: "50% 0%", md: "0% 0%" },
             }}
         >
-            <Container maxWidth="xl">
+            <Container maxWidth="lg">
                 <Grid container spacing={2}>
-                    <Grid item xs={12} sm={9}>
+                    <Grid item xs={12}>
                         <Box
                             sx={{
                                 padding: {
@@ -56,7 +56,7 @@ const Hero = () => {
                                     marginTop: "1rem",
                                 }}
                             >
-                                <Link href="/projects">
+                                <Link href="#contact">
                                     <Button
                                         endIcon={<ArrowRightAlt />}
                                         variant="contained"
