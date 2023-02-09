@@ -2,6 +2,8 @@ import {
     Box,
     Button,
     Container,
+    Divider,
+    Grid,
     Paper,
     TextField,
     Typography,
@@ -9,6 +11,7 @@ import {
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import theme from "../../styles/themes/theme";
+import { OpenInNew } from "@mui/icons-material";
 
 const Contact = () => {
     const [email, setEmail] = useState("");
@@ -153,6 +156,174 @@ const Contact = () => {
                                 frameborder="0"
                                 src="https://www.freemedicarereport.com/comparison_form/charlenemorris.com?bg_color=D739A4&cta_color=2CF6B3&plan=G"
                             ></iframe>
+                        </Box>
+                        <Box>
+                            <Divider
+                                sx={{
+                                    background: theme.palette.custom.lightMuted,
+                                }}
+                            />
+                            <Grid container>
+                                <Grid item xs={12} md={6}>
+                                    <Box
+                                        sx={{
+                                            height: "100%",
+                                            display: "flex",
+                                            justifyContent: "center",
+                                            alignItems: "center",
+                                            flexDirection: "column",
+                                            gap: "1rem",
+                                            padding: "4rem 0",
+                                        }}
+                                    >
+                                        <Typography
+                                            variant="h3"
+                                            component="p"
+                                            sx={{
+                                                color: theme.palette.custom
+                                                    .light,
+                                            }}
+                                        >
+                                            Sign Up Online!
+                                        </Typography>
+                                        <Divider
+                                            sx={{
+                                                background:
+                                                    theme.palette.custom
+                                                        .lightMuted,
+                                                width: "8rem",
+                                            }}
+                                        />
+                                        <Typography
+                                            sx={{
+                                                color: theme.palette.custom
+                                                    .lightMuted,
+                                            }}
+                                        >
+                                            Click on a provider to sign up
+                                            online in no time, and get the
+                                            personalized care you deserve.
+                                        </Typography>
+                                    </Box>
+                                </Grid>
+                                <Grid item xs={12} md={6}>
+                                    <Box
+                                        sx={{
+                                            height: "100%",
+                                            display: "flex",
+                                            justifyContent: "center",
+                                            alignItems: "center",
+                                            flexDirection: "column",
+                                            padding: "4rem 0",
+                                        }}
+                                    >
+                                        <Box
+                                            sx={{
+                                                display: "flex",
+                                                flexDirection: "column",
+                                                gap: "1rem",
+                                            }}
+                                        >
+                                            <Box
+                                                sx={{
+                                                    display: "flex",
+                                                    gap: "1rem",
+                                                    alignItems: "center",
+                                                }}
+                                            >
+                                                <OpenInNew
+                                                    sx={{
+                                                        color: theme.palette
+                                                            .custom.light,
+                                                    }}
+                                                />
+                                                <Typography
+                                                    sx={{
+                                                        color: theme.palette
+                                                            .custom.light,
+                                                        "&:hover": {
+                                                            textDecoration:
+                                                                "underline",
+                                                        },
+                                                    }}
+                                                >
+                                                    <a
+                                                        href="https://www.humana.com/AOA/1316926"
+                                                        target="_blank"
+                                                        rel="noreferrer"
+                                                    >
+                                                        Humana
+                                                    </a>
+                                                </Typography>
+                                            </Box>
+                                            <Box
+                                                sx={{
+                                                    display: "flex",
+                                                    gap: "1rem",
+                                                    alignItems: "center",
+                                                }}
+                                            >
+                                                <OpenInNew
+                                                    sx={{
+                                                        color: theme.palette
+                                                            .custom.light,
+                                                    }}
+                                                />
+                                                <Typography
+                                                    sx={{
+                                                        color: theme.palette
+                                                            .custom.light,
+                                                        "&:hover": {
+                                                            textDecoration:
+                                                                "underline",
+                                                        },
+                                                    }}
+                                                >
+                                                    <a
+                                                        href="https://agentsite.anthem.com/agentsite/ac/wwwcharlenemorriscom"
+                                                        target="_blank"
+                                                        rel="noreferrer"
+                                                    >
+                                                        Anthem
+                                                    </a>
+                                                </Typography>
+                                            </Box>
+                                            <Box
+                                                sx={{
+                                                    display: "flex",
+                                                    gap: "1rem",
+                                                    alignItems: "center",
+                                                }}
+                                            >
+                                                <OpenInNew
+                                                    sx={{
+                                                        color: theme.palette
+                                                            .custom.light,
+                                                    }}
+                                                />
+                                                <Typography
+                                                    sx={{
+                                                        color: theme.palette
+                                                            .custom.light,
+                                                        "&:hover": {
+                                                            textDecoration:
+                                                                "underline",
+                                                        },
+                                                    }}
+                                                >
+                                                    <a
+                                                        href=" https://app.thinkagent.com/ext?repid=3077075"
+                                                        target="_blank"
+                                                        rel="noreferrer"
+                                                    >
+                                                        Aetna
+                                                    </a>
+                                                </Typography>
+                                            </Box>
+                                        </Box>
+                                    </Box>
+                                </Grid>
+                            </Grid>
                         </Box>
                         {submitted && (
                             <Typography sx={{ color: "white" }}>
